@@ -14,8 +14,14 @@ class Search extends Component{
     }
     render(){
         return(
+            // floatingLabelText = placeholder
             <>
-            
+                <TextField
+                    name="searchText"
+                    value={this.state.searchText}
+                    onChange={this.onTextChange}
+                    floatingLabelText="Search for Images"
+                    fullWidth />
             </>
         )
     }
