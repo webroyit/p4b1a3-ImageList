@@ -13,6 +13,12 @@ class Search extends Component{
         apiKey: APIKEY,
         images: []
     }
+
+    // arrow function bind this
+    onTextChange = e => {
+        this.setState({ [e.target.name]: e.target.value })
+    }
+
     render(){
         return(
             // floatingLabelText = placeholder
