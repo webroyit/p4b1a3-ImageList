@@ -26,6 +26,10 @@ class Search extends Component{
         })
     }
 
+    onAmountChange = (e, index, value) => {
+        this.setState({amount: value})
+    }
+
     render(){
         return(
             // floatingLabelText = placeholder
