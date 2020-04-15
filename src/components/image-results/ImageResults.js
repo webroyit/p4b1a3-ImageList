@@ -3,9 +3,15 @@ import PropTypes from "prop-types";
 import { GridList, GridTile } from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import ZoomIn from 'material-ui/svg-icons/action/zoom-in';
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
 
 class ImageResults extends Component{
-   
+    state = {
+        // for dialog
+        open: false,
+        currentImg: ""
+    }
     render(){
         const { images } = this.props;
         let imageListContent;
@@ -35,6 +41,10 @@ class ImageResults extends Component{
         } else{
             imageListContent = null;
         }
+
+        const actions = [
+            <FlatButton label="Close" primary={true} onClick={this.handleClose} />
+        ]
 
         return(
             <div>
